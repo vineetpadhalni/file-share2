@@ -5,20 +5,17 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon server",
-    "serve": "node server",
-    "start": "node index.js",
-    "build": "npm install"
+    "serve": "node server"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^8.6.0",
-    "ejs": "^3.1.10",
-    "express": "^4.19.2",
-    "mongoose": "^5.13.22",
-    "multer": "^1.4.4",
-    "nodemailer": "^6.9.14",
-    "uuid": "^8.3.2",
-    "yarn": "^1.22.22"
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.11",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
