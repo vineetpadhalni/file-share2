@@ -6,7 +6,7 @@ const path = require('path');
 const cors = require('cors');
 // Cors 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300', 'http://127.0.0.1:5500'], // Add your allowed origins here
+  origin: ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300', 'http://127.0.0.1:5500','http://127.0.0.1:5501'], // Add your allowed origins here
   methods: ['GET', 'POST'], // Add other methods you need to support
   allowedHeaders: ['Content-Type', 'Authorization'], // Add headers you want to allow
 };
@@ -31,9 +31,9 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 // Routes 
-app.get('/api/files', require('./routes/files'));
-app.get('/files', require('./routes/show'));
-app.get('/files/download', require('./routes/download'));
+app.use('/api/files', require('./routes/files'));
+app.use('/files', require('./routes/show'));
+app.use('/files/download', require('./routes/download'));
 app.get("/messages", (req, res) => {
   res.send("Hello");
 })
